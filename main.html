@@ -3,142 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Shopping Cart Layout</title>
-
+  <title>Bootstrap Shopping Cart</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     body {
-      background-color: #eee;
+      background-color: #f8f9fa;
     }
-    .block-heading {
+
+    .block-heading h2, 
+    .block-heading p {
       text-align: center;
       color: #3b99e0;
-      margin-bottom: 30px;
     }
+
     .block-heading h2 {
+      font-size: 28px;
       font-weight: 700;
       margin-bottom: 10px;
     }
+
+    .block-heading p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
     .product {
       background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 15px;
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
     }
-    .product img {
-      max-width: 80px;
-    }
-    .product .info {
-      flex-grow: 1;
-      padding-left: 20px;
-    }
-    .product .info h6 {
-      margin: 0;
-    }
+
     .summary {
       background-color: #f7fbff;
-      border-top: 2px solid #5ea4f3;
+      border-top: 3px solid #5ea4f3;
       padding: 20px;
+      border-radius: 10px;
     }
+
     .summary h5 {
+      color: #3b99e0;
       margin-bottom: 20px;
     }
+
     .summary .btn {
       background-color: #3b99e0;
       color: #fff;
-      width: 100%;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
     }
+
     .summary .btn:hover {
-      background-color: #2a81c9;
+      background-color: #5ea4f3;
     }
   </style>
 </head>
 <body>
 
-  <div class="container mt-5">
-    <div class="block-heading">
-      <h2>Shopping cart</h2>
-      <p>The customer is very important, the customer will be followed by the customer. Nunc in enim a nibh posuere gravida.</p>
+  <div class="container py-5">
+    <!-- Block Heading -->
+    <div class="block-heading text-center">
+      <h2>Shopping Cart</h2>
+      <p>Your selected items are shown below</p>
     </div>
 
+    <!-- Main Row -->
     <div class="row">
-      <!-- Left column -->
+      <!-- Left Side: Products -->
       <div class="col-lg-8">
         <div class="product">
-          <img src="https://i.postimg.cc/FzvPJnzt/iphone11.png" class="img-fluid" alt="Product 1">
-          <div class="info">
-            <h6>I am very sorry</h6>
-            <p>Display: 6.1 inches <br> Memory: 128GB</p>
-          </div>
-          <div>
-            <p>Quantity: 1</p>
-          </div>
-          <div>
-            <p>$120</p>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="https://i.postimg.cc/FzvPJnzt/iphone11.png" class="img-fluid" alt="Product 2">
-          <div class="info">
-            <h6>I am very sorry</h6>
-            <p>Display: 6.1 inches <br> Memory: 128GB</p>
-          </div>
-          <div>
-            <p>Quantity: 1</p>
-          </div>
-          <div>
-            <p>$120</p>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Product 1">
+            </div>
+            <div class="col-md-8">
+              <h5>Product 1</h5>
+              <p>Some description about product 1.</p>
+              <p>Price: $20</p>
+            </div>
           </div>
         </div>
 
         <div class="product">
-          <img src="https://i.postimg.cc/FzvPJnzt/iphone11.png" class="img-fluid" alt="Product 3">
-          <div class="info">
-            <h6>I am very sorry</h6>
-            <p>Display: 6.1 inches <br> Memory: 128GB</p>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Product 2">
+            </div>
+            <div class="col-md-8">
+              <h5>Product 2</h5>
+              <p>Some description about product 2.</p>
+              <p>Price: $30</p>
+            </div>
           </div>
-          <div>
-            <p>Quantity: 1</p>
-          </div>
-          <div>
-            <p>$120</p>
+        </div>
+
+        <div class="product">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Product 3">
+            </div>
+            <div class="col-md-8">
+              <h5>Product 3</h5>
+              <p>Some description about product 3.</p>
+              <p>Price: $40</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Right column -->
+      <!-- Right Side: Summary -->
       <div class="col-lg-4">
         <div class="summary">
           <h5>Summary</h5>
-          <div class="d-flex justify-content-between">
-            <span>Subtotal</span>
-            <span>$360</span>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>Discount</span>
-            <span>$0</span>
-          </div>
-          <div class="d-flex justify-content-between border-bottom mb-3 pb-2">
-            <span>Shipping</span>
-            <span>$0</span>
-          </div>
-          <div class="d-flex justify-content-between mb-3">
-            <strong>Total</strong>
-            <strong>$360</strong>
-          </div>
-          <button class="btn">Checkout</button>
+          <p>Subtotal: $90</p>
+          <p>Shipping: $10</p>
+          <hr>
+          <p><strong>Total: $100</strong></p>
+          <button class="btn w-100">Checkout</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

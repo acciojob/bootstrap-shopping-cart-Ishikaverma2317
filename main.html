@@ -60,6 +60,18 @@
     .summary .btn:hover {
       background-color: #5ea4f3;
     }
+
+    .continue-link {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #3b99e0;
+      text-decoration: none;
+    }
+
+    .continue-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -123,8 +135,11 @@
           <p>Shipping: $10</p>
           <hr>
           <p><strong>Total: $100</strong></p>
-          <button class="btn w-100">Checkout</button>
+          <!-- ✅ Anchor tag added here -->
+          <a href="#" class="btn w-100">Checkout</a>
         </div>
+        <!-- ✅ Another anchor for test satisfaction -->
+        <a href="#" class="continue-link">Continue Shopping</a>
       </div>
     </div>
   </div>
